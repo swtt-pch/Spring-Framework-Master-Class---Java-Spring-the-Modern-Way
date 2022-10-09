@@ -25,7 +25,4 @@ public class BinarySearchImpl {
         return 3;
     }
 
-
-
-
 }
