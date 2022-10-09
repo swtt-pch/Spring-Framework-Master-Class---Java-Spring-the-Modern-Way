@@ -5,6 +5,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class BinarySearchImpl {
+    // Optional - use setter injection
+    // otherwise use constructor injection
     @Autowired
     private SortAlgorithm sortAlgorithm;
 
