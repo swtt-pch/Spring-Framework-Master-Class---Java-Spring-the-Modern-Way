@@ -1,11 +1,12 @@
 package com.student.level1;
 
+import com.student.level1.basic.BinarySearchImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
-public class Level1Application {
+public class BasicApplication {
 	// What are the beans? add bean notation to class
 	// What are the dependencies of a bean?  @Autowired
 	// Where to search for beans? => no need
@@ -13,7 +14,7 @@ public class Level1Application {
 		//BinarySearchImpl binarySearch = new BinarySearchImpl(new QuickSortAlgorithm());
 		// Application Context
 		ApplicationContext applicationContext =
-				SpringApplication.run(Level1Application.class, args);
+				SpringApplication.run(BasicApplication.class, args);
 
 		BinarySearchImpl binarySearch1 =
 				applicationContext.getBean(BinarySearchImpl.class);
