@@ -9,11 +9,8 @@ public class BinarySearchImpl {
     // otherwise use constructor injection
     @Autowired
     private SortAlgorithm sortAlgorithm;
-
-    public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
-        super();
-        this.sortAlgorithm = sortAlgorithm;
-    }
+//    @Autowired // dependecy injection using name
+//    private SortAlgorithm bubbleSortAlgorithm;
 
     // 1- Sorting an array
     public int binarySearch(int[] numbers, int numberToSearchFor){
