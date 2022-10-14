@@ -2,17 +2,15 @@ package com.student.level1;
 
 import com.student.level1.basic.BinarySearchImpl;
 import com.student.level1.scope.xml.XmlPersonDAO;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-@Configuration
-@ComponentScan
 public class XMLContextApplication {
-	// What are the beans? add bean notation to class
-	// What are the dependencies of a bean?  @Autowired
-	// Where to search for beans? => no need
+	private static Logger LOGGER = LoggerFactory.getLogger(ScopeApplication.class);
 	public static void main(String[] args) {
 		//BinarySearchImpl binarySearch = new BinarySearchImpl(new QuickSortAlgorithm());
 		// Application Context
@@ -24,8 +22,9 @@ public class XMLContextApplication {
 					applicationContext.getBean(XmlPersonDAO.class);
 
 
-			System.out.println(xmlPersonDAO);
-			System.out.println(xmlPersonDAO.getXmlJdbcConnection());
+			LOGGER.info("Beans loaded ->  {}",(Object)applicationContext.getBeanDefinitionNames());
+//			System.out.println(xmlPersonDAO);
+//			System.out.println(xmlPersonDAO.getXmlJdbcConnection());
 		} finally {
 
 		}
