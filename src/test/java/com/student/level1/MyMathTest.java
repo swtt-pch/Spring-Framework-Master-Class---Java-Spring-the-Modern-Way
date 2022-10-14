@@ -7,13 +7,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 //@SpringBootTest
 public class MyMathTest {
+    private MyMath math = new MyMath();
     @Test
-    void test(){
-        int[] numbers = {1,2,3};
-        MyMath math = new MyMath();
-        int sum = math.calculateSum(numbers);
-        System.out.println(sum);
-        int expectedSum = 6;
-        assertEquals(expectedSum, sum);
+    void calculateSum_ThreeMemberArray(){
+        assertEquals(6, math.calculateSum(new int[] {1,2,3}));
+    }
+
+    @Test
+    void calculateSum_ZeroLengthArray(){
+        assertEquals(0, math.calculateSum(new int[] {}));
     }
 }
