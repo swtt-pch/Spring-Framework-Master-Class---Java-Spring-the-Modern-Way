@@ -8,8 +8,6 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
 
 
 @Component
@@ -28,11 +26,11 @@ public class BinarySearchImpl {
         return 3;
     }
 
-    @PostConstruct
+    //@PostConstruct
     public void postConstruct(){
         logger.info("postConstruct");
     }
-    @PreDestroy
+    //@PreDestroy
     public void preDestroy(){
         logger.info("PreDestroy");
     }
