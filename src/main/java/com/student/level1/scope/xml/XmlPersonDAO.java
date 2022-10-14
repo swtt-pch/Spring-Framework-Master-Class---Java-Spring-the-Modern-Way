@@ -2,8 +2,9 @@ package com.student.level1.scope.xml;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository
 public class XmlPersonDAO {
     @Autowired
     XmlJdbcConnection xmlJdbcConnection;
