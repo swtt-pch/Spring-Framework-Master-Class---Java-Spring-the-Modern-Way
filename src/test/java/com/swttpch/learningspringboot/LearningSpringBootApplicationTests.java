@@ -1,10 +1,10 @@
-package com.swttpch.mockito.demo;
+package com.swttpch.learningspringboot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApplicationTests {
+class LearningSpringBootApplicationTests {
 
 	@Test
 	void contextLoads() {
